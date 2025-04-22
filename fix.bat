@@ -13,7 +13,7 @@ if not exist "%appxFile%" (
 )
 
 REM Check if 7-Zip is installed (adjust path if necessary)
-set "sevenZipPath=C:\Program Files\7-Zip\7z.exe"
+set "sevenZipPath=E:\Users\Gebruiker\Downloads\7-Zip\7z.exe"
 if not exist "%sevenZipPath%" (
     echo 7-Zip not found. Please install 7-Zip and ensure it's in the path specified.
     pause
@@ -28,7 +28,7 @@ del "%extractDir%\[Content_Types].xml"
 del "%extractDir%\AppxBlockMap.xml"
 
 REM Use Developer Command Prompt for VS 2019 to run MakeAppx pack
-call "C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\Tools\VsDevCmd.bat"
+call "E:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\Tools\VsDevCmd.bat"
 
 REM Navigate to the directory where the script is located
 cd /d "%~dp0"
